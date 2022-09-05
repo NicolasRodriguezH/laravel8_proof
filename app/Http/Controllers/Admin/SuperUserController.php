@@ -73,7 +73,7 @@ class SuperUserController extends Controller
 
         $superuser->update($request->all());
 
-        return redirect()->route('admin.superusers.edit', $superuser)->with('info', 'La categoria se actualizo con exito');
+        return redirect()->route('admin.superusers.edit', $superuser)->with('info', 'La informacion se actualizo con exito');
     }
 
     /**

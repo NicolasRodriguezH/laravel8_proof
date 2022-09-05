@@ -323,53 +323,38 @@ return [
             'route'  => 'admin.superusers.index',
             'icon' => 'fas fa-fw fa-user',
         ],
-        [
-            'text' => 'Coordinador',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text' => 'Consultor',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
+
         [
             'text'    => 'Escrutador',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
                     'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                    'route'  => 'admin.tellers.index',
                 ],
                 [
                     'text' => 'level_one',
-                    'url'  => '#',
+                    'route'  => 'admin.tellers.index',
+                ],
+                [
+                    'text' => 'level_one',
+                    'route'  => 'admin.tellers.index',
+                ],
+                [
+                    'text' => 'level_one',
+                    'route'  => 'admin.tellers.index',
                 ],
             ],
+        ],
+        [
+            'text' => 'Coordinador',
+            'route'  => 'admin.coordinators.index',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+        [
+            'text' => 'Consultor',
+            'route'  => 'admin.consultors.index',
+            'icon' => 'fas fa-fw fa-lock',
         ],
     ],
 
