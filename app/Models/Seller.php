@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class Seller extends Model
 {
@@ -14,6 +15,12 @@ class Seller extends Model
     {
         return "slug";
     } */
+
+    public function setFirstNameAttribute(Request $request)
+    {
+        $this->attributes['nombre'] = strtoupper($request);
+        return $request;
+    }
 
     /* Aca iran las relaciones entre tablas */
 }

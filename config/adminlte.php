@@ -253,7 +253,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => '/',
+    'dashboard_url' => '/dashboard',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -317,6 +317,12 @@ return [
             'icon'        => 'fas fa-tachometer-alt fa-fw',
             'label_color' => 'success',
         ],
+        [
+            'text'        => 'Users',
+            'route'         => 'admin.users.index',
+            'icon'        => 'fas fa-fw fa-users',
+            'label_color' => 'success',
+        ],
         ['header' => 'ADMINISTRADOR'],
         [
             'text' => 'Super-User',
@@ -329,19 +335,19 @@ return [
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
+                    'text' => 'Coordinador 1',
                     'route'  => 'admin.tellers.index',
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'Coordinador 2',
                     'route'  => 'admin.tellers.index',
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'Coordinador 3',
                     'route'  => 'admin.tellers.index',
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'Coordinador 4',
                     'route'  => 'admin.tellers.index',
                 ],
             ],

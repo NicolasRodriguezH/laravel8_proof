@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Seller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class TellerController extends Controller
 {
@@ -15,7 +16,10 @@ class TellerController extends Controller
      */
     public function index()
     {
-        $sellers = Seller::all();
+        /* Seria mejor un input para filtrar registros? */
+        //$sellers = Seller::paginate(4);
+        $sellers = Seller::where('status', 1)->get();
+        //Seller::all(1, Str::length($sellers) - 1);
 
         return view('admin.tellers.index', compact('sellers'));
     }
